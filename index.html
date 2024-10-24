@@ -22,13 +22,13 @@
     }
 
     .header img {
-      width: 50px;
+      width: 40px; /* Giảm kích thước logo trên điện thoại */
       vertical-align: middle;
     }
 
     .header h1 {
       display: inline;
-      font-size: 24px;
+      font-size: 20px; /* Điều chỉnh kích thước tiêu đề */
     }
 
     .menu {
@@ -42,36 +42,41 @@
     /* Main content */
     .main-content {
       text-align: center;
-      padding: 20px;
+      padding: 10px;
     }
 
     .main-content img {
       width: 100%;
-      max-width: 400px;
+      max-width: 300px; /* Giới hạn kích thước hình ảnh cho điện thoại */
       border-radius: 10px;
     }
 
     .button-container {
-      margin: 20px 0;
+      margin: 10px 0;
       display: flex;
-      justify-content: space-around;
+      flex-wrap: wrap;
+      justify-content: center;
     }
 
     .button {
       display: inline-block;
       background-color: #f68020;
       color: white;
-      padding: 15px 20px;
+      padding: 10px 15px; /* Giảm kích thước padding cho điện thoại */
       border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
+      margin: 5px;
+      font-size: 14px; /* Giảm kích thước chữ trên nút */
       text-align: center;
+      width: 100%; /* Mở rộng nút để phù hợp với màn hình điện thoại */
+      max-width: 200px; /* Đặt giới hạn độ rộng cho nút */
     }
 
     /* Contact section */
     .contact {
       position: fixed;
-      right: 20px;
+      right: 10px; /* Giảm khoảng cách bên phải */
       top: 50%;
       transform: translateY(-50%);
       display: flex;
@@ -79,17 +84,38 @@
     }
 
     .contact div {
-      margin-bottom: 20px;
+      margin-bottom: 10px; /* Giảm khoảng cách giữa các mục */
       text-align: center;
     }
 
     .contact a img {
-      width: 40px;
+      width: 30px; /* Giảm kích thước icon trên điện thoại */
       transition: transform 0.3s ease;
     }
 
     .contact a img:hover {
       transform: scale(1.5);
+    }
+
+    /* Responsive cho màn hình nhỏ */
+    @media only screen and (max-width: 600px) {
+      .header h1 {
+        font-size: 18px; /* Điều chỉnh tiêu đề nhỏ hơn */
+      }
+
+      .main-content img {
+        max-width: 250px; /* Giới hạn kích thước hình ảnh hơn nữa trên màn hình nhỏ */
+      }
+
+      .button {
+        font-size: 12px; /* Giảm kích thước chữ trong nút */
+        padding: 8px 12px; /* Điều chỉnh padding cho nhỏ hơn */
+        max-width: 150px; /* Giảm độ rộng tối đa của nút */
+      }
+
+      .contact a img {
+        width: 25px; /* Giảm kích thước icon hơn nữa */
+      }
     }
   </style>
 </head>
