@@ -70,22 +70,26 @@
 
     /* Contact section */
     .contact {
+      position: fixed;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
       display: flex;
-      justify-content: space-around;
-      background-color: white;
-      padding: 20px;
-      border-top: 1px solid #e0e0e0;
+      flex-direction: column;
     }
 
     .contact div {
+      margin-bottom: 20px;
       text-align: center;
-      font-size: 18px;
     }
 
-    .contact div span {
-      color: #007bff;
-      font-size: 24px;
-      font-weight: bold;
+    .contact a img {
+      width: 40px;
+      transition: transform 0.3s ease;
+    }
+
+    .contact a img:hover {
+      transform: scale(1.5);
     }
   </style>
 </head>
@@ -94,17 +98,20 @@
 <!-- Header -->
 <div class="header">
   <div class="menu">☰</div>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/University_Medical_Center_UMC_logo.png/300px-University_Medical_Center_UMC_logo.png" alt="UMC Logo">
+  <img src="bs.jpg" alt="UMC Logo">
   <h1>UMC</h1>
-  <p>Bệnh viện Đại học Y Dược TPHCM</p>
+  <p>HỆ THỐNG CHĂM SÓC SỨC KHỎE NHỜ AI</p>
 </div>
 
 <!-- Main Content -->
 <div class="main-content">
-  <img src="https://www.umc.edu/images/default-source/about-umc/umc-cares.jpg" alt="Doctor and Patient">
+  <img src="ht.jpg" alt="Doctor and Patient">
   <div class="button-container">
-    <a href="#" class="button">Phiếu khám bệnh</a>
-    <a href="#" class="button">Thanh toán viện phí nội trú</a>
+    <a href="#" class="button">HỒ SƠ BỆNH ÁN</a>
+    <a href="#" class="button">CHUẨN ĐOÁN VỚI AI</a>
+    <a href="#" class="button">CHẾ ĐỘ TẬP LUYỆN</a>
+    <a href="#" class="button">CHẾ ĐỘ DINH DƯỠNG</a>
+    <a href="#" class="button">TƯ VẤN VỚI BÁC SĨ</a>
   </div>
   <a href="#" class="button">ĐẶT LỊCH KHÁM</a>
 </div>
@@ -112,12 +119,19 @@
 <!-- Contact Section -->
 <div class="contact">
   <div>
-    Hỗ trợ chuyên môn<br>
-    <span>19007178</span>
+    <a href="mailto:support@umc.com.vn" target="_blank">
+      <img src="gmail.png" alt="Gmail Icon">
+    </a>
   </div>
   <div>
-    Hỗ trợ đặt khám<br>
-    <span>19002115</span>
+    <a href="https://zalo.me/0817727460" target="_blank">
+      <img src="zalo.png" alt="Zalo Icon">
+    </a>
+  </div>
+  <div>
+    <a href="https://www.facebook.com/trongtruong.0301" target="_blank">
+      <img src="facebook.png" alt="Facebook Icon">
+    </a>
   </div>
 </div>
 
