@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1125, initial-scale=1.0">
   <title>Web Mobile UMC</title>
   <style>
     body {
@@ -22,13 +22,13 @@
     }
 
     .header img {
-      width: 40px; /* Giảm kích thước logo trên điện thoại */
+      width: 40px;
       vertical-align: middle;
     }
 
     .header h1 {
       display: inline;
-      font-size: 20px; /* Điều chỉnh kích thước tiêu đề */
+      font-size: 24px;
     }
 
     .menu {
@@ -42,41 +42,46 @@
     /* Main content */
     .main-content {
       text-align: center;
-      padding: 10px;
+      padding: 20px;
     }
 
     .main-content img {
       width: 100%;
-      max-width: 300px; /* Giới hạn kích thước hình ảnh cho điện thoại */
+      max-width: 400px;
       border-radius: 10px;
     }
 
+    /* Button container */
     .button-container {
-      margin: 10px 0;
+      margin: 20px 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
+      gap: 10px;
     }
 
     .button {
       display: inline-block;
       background-color: #f68020;
       color: white;
-      padding: 10px 15px; /* Giảm kích thước padding cho điện thoại */
+      padding: 10px 20px;
       border-radius: 25px;
       text-decoration: none;
       font-weight: bold;
-      margin: 5px;
-      font-size: 14px; /* Giảm kích thước chữ trên nút */
       text-align: center;
-      width: 100%; /* Mở rộng nút để phù hợp với màn hình điện thoại */
-      max-width: 200px; /* Đặt giới hạn độ rộng cho nút */
+      font-size: 14px;
+      width: 45%; /* Adjust button width */
+      box-sizing: border-box;
+    }
+
+    .button.large {
+      width: 100%; /* Full width for the large button */
     }
 
     /* Contact section */
     .contact {
       position: fixed;
-      right: 10px; /* Giảm khoảng cách bên phải */
+      right: 20px;
       top: 50%;
       transform: translateY(-50%);
       display: flex;
@@ -84,12 +89,12 @@
     }
 
     .contact div {
-      margin-bottom: 10px; /* Giảm khoảng cách giữa các mục */
+      margin-bottom: 10px;
       text-align: center;
     }
 
     .contact a img {
-      width: 30px; /* Giảm kích thước icon trên điện thoại */
+      width: 40px;
       transition: transform 0.3s ease;
     }
 
@@ -97,24 +102,27 @@
       transform: scale(1.5);
     }
 
-    /* Responsive cho màn hình nhỏ */
-    @media only screen and (max-width: 600px) {
+    /* Media Query for 1125 x 2436 screen */
+    @media (max-width: 1125px) and (max-height: 2436px) {
       .header h1 {
-        font-size: 18px; /* Điều chỉnh tiêu đề nhỏ hơn */
+        font-size: 20px;
       }
 
       .main-content img {
-        max-width: 250px; /* Giới hạn kích thước hình ảnh hơn nữa trên màn hình nhỏ */
+        max-width: 300px;
       }
 
       .button {
-        font-size: 12px; /* Giảm kích thước chữ trong nút */
-        padding: 8px 12px; /* Điều chỉnh padding cho nhỏ hơn */
-        max-width: 150px; /* Giảm độ rộng tối đa của nút */
+        font-size: 12px;
+        padding: 10px 15px;
+      }
+
+      .button-container {
+        gap: 5px;
       }
 
       .contact a img {
-        width: 25px; /* Giảm kích thước icon hơn nữa */
+        width: 35px; /* Make icons slightly smaller */
       }
     }
   </style>
@@ -124,14 +132,14 @@
 <!-- Header -->
 <div class="header">
   <div class="menu">☰</div>
-  <img src="bs.jpg" alt="UMC Logo">
-  <h1>UMC</h1>
+  <img src="ht.jpg" alt="UMC Logo">
+  <h1>HEALTHY BOT</h1>
   <p>HỆ THỐNG CHĂM SÓC SỨC KHỎE NHỜ AI</p>
 </div>
 
 <!-- Main Content -->
 <div class="main-content">
-  <img src="ht.jpg" alt="Doctor and Patient">
+  <img src="bs.jpg" alt="Doctor and Patient">
   <div class="button-container">
     <a href="#" class="button">HỒ SƠ BỆNH ÁN</a>
     <a href="#" class="button">CHUẨN ĐOÁN VỚI AI</a>
@@ -139,7 +147,7 @@
     <a href="#" class="button">CHẾ ĐỘ DINH DƯỠNG</a>
     <a href="#" class="button">TƯ VẤN VỚI BÁC SĨ</a>
   </div>
-  <a href="#" class="button">ĐẶT LỊCH KHÁM</a>
+  <a href="#" class="button large">ĐẶT LỊCH KHÁM</a>
 </div>
 
 <!-- Contact Section -->
